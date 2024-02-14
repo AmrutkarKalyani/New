@@ -1,3 +1,3 @@
-# New
-New Project
-This project is only created for practice .
+
+# Online Portfolio Website
+An online portfolio website using HTML,CSS and JavaScript.
