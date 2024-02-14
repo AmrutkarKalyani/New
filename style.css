@@ -1,6 +1,11 @@
 /* Stylesheet for Portfolio Website */
+.h1{
+    color:saddlebrown;
+}
+
 
 body {
+    background-color:indianred;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
