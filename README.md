@@ -1,2 +1,2 @@
 # Online Portfolio Website
-New Project
+An online portfolio website using HTML,CSS and JavaScript.
