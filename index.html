@@ -4,20 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <h1>My Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1>My Portfolio</h1>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+                <div class="header-text">
+                    <p>Junior Software Engineer</p>
+                    <h1>Hi, I'm <span>Kalyani</span><br>Amrutkar from Pachora</h1>
+                </div>
+        </div>
+    </div>
+
+  <!-- --------------About Section---------------- -->
+<div id ="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/KalyaniFormalPhoto.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p> To enhance my skills by taking on the challenging position and expanding my knowledge.
+                <br>To seek a position in a company that can launch my career 
+                and help me to build a stronger skill set.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <!-- Skills-->
+                <div class="tab-contents active-tab " id="skills">
+                    <ul>
+                        <li><span>AWS</span><br>For Development</li>
+                        <li><span>Java</span><br>For Development</li>
+                        <li><span>MySQL</span><br>Store Data</li>
+                        <li><span>Spring-Boot</span><br>For Development</li>
+                        <li><span>Microservices</span><br>Web Development</li>
+                        <li><span>C & CPP</span><br>For Development</li>
+                        <li><span>HTML & CSS</span><br>Web Development</li>
+                        <li><span>Git & Github</span><br>For Development</li>
+                    </ul>
+                </div>
+                <!-- Experience -->
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Cognizant</span><br>Programmer Analyst Trainee<br>Oct 2022 - May 2023</li>
+                        <li><span>Cognizant</span><br>Intern<br>Feb 2022 - Aug 2022</li>
+                    </ul>
+                </div>
+
+                <!-- Education -->
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>B.E (I.T)</span><br>AVCOE,Sangamner<br>2018 - 2022<br>74.67%</li>
+                        <li><span>H.S.C</span><br>SSMM College,Pachora<br>2017 - 2018<br>63.85%</li>
+                        <li><span>S.S.C</span><br>P.K.Shinde School,Pachora<br>2015 - 2016<br>88.60%</li>
+                    </ul>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- -->
+
+
+
 
     <section id="projects">
         <h2>Projects</h2>
@@ -28,54 +94,46 @@
         </div>
         <div class="project">
             <h3>Online Food Ordering System</h3>
-            <p>The online food ordering system sets a menu online and customers easily place the order on simple mouse click or clicking a button and without gathering in a café.<br>
+            <p>The online food ordering system sets a menu online and customers easily place the order on simple mouse click or clicking a button and without gathering in a café. 
+                <br>
             This system allows the customer to select the desired food item from the displayed menu and order food items easily.</p>
         </div>
     </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Java</li>
-            <li>MySQL</li>
-            <li>Spring Boot</li>
-            <li>Git & Github</li>
-            <li>HTMl & CSS</li>
-            <li>AWS</li>
-        </ul>
-    </section>
-
-    <section id="experience">
-        <h2>Experience</h2>
-        <ul>
-        <li>
-            <h4>Cognizant</h4>
-           <p>Programmer Analyst Trainee <br>Oct 2022-May 2023</p>
-        </li>
-        <li>
-            <h4>Cognizant</h4>
-            <p>Intern <br>Feb 2022-Aug 2022</p>
-        </li>
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-            <label for="name">Name: </label>
-            <name="name">Kalyani Kiran Amrutkar
-            <br>
-            <label for="email">Email: </label>
-            <name="email" required>kalyaniamrutkar26@gmail.com
-            <br>
-            <label for="phone">Contact:</label>
-            <name="phone"  required> 8149844182
-    </section>
 
     <footer>
         <p>&copy; 2024 My Portfolio</p>
     </footer>
 
     <script src="script.js"></script>
+
+
+
+
+
+
+
+
+
+
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
 </body>
 </html>
 
